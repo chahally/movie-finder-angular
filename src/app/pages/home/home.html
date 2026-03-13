@@ -1,0 +1,24 @@
+<div class="app-container">
+
+  <h1 class="title">🎬 Movie Finder</h1>
+
+  <p class="subtitle">Search for any movie using the TMDB API</p>
+
+  <app-search (search)="onSearch($event)"></app-search>
+
+  <div *ngIf="loading" class="loading">
+    Loading movies...
+  </div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+
+  <div class="movie-grid">
+    <app-movie-card
+      *ngFor="let movie of movies"
+      [movie]="movie">
+    </app-movie-card>
+  </div>
+
+</div>

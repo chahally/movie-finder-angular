@@ -1,0 +1,13 @@
+<div class="movie-card">
+
+  <img [src]="posterUrl" alt="{{ movie.title }}" />
+
+  <div class="movie-info">
+    <h3>{{ movie.title }}</h3>
+
+    <p class="rating">⭐ {{ movie.vote_average }}</p>
+
+    <p class="date">{{ movie.release_date }}</p>
+  </div>
+
+</div>
